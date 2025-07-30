@@ -13,122 +13,120 @@
 </head>
 
 <body>
-    <header class="bg-cover bg-center items-center" style="background-image: url('./img/header-bg.svg')">
-        <nav class="relative md:px-8">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<header class="bg-cover bg-center" style="background-image: url('./img/header-bg.svg')">
+    <nav class="relative md:px-8">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./img/totc-img.svg" alt="Logo" />
+            </a>
 
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="./img/totc-img.svg" alt="Logo" />
-                </a>
+            <div class="flex md:order-2 items-center space-x-3">
+                <button type="button"
+                    class="bg-white text-[#5B5B5B] px-6 py-2 text-lg font-semibold rounded-full hover:shadow-lg">
+                    Login
+                </button>
 
-                <div class="flex md:order-2 items-center space-x-3">
-                    <button type="button"
-                        class="bg-white text-[#5B5B5B] px-8 py-2 text-xl font-semibold rounded-full hover:shadow-lg">
-                        Login
-                    </button>
+                <button type="button"
+                    class="bg-white/30 text-white px-6 py-2 text-lg font-semibold rounded-full hover:shadow-lg">
+                    Sign Up
+                </button>
 
-                    <button type="button"
-                        class="bg-white/30 text-white/100 px-8 py-2 text-xl font-semibold rounded-full hover:shadow-lg">
-                        Sign Up
-                    </button>
-
-                    <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600"
-                        aria-controls="navbar-sticky" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul
-                        class="flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse font-medium text-xl mt-4 md:mt-0 p-4 md:p-0 bg-black md:bg-transparent text-white">
-                        <li><a href="#" class="block py-2 px-3 hover:shadow-lg">Home</a></li>
-                        <li><a href="#" class="block py-2 px-3 hover:shadow-lg">Courses</a></li>
-                        <li><a href="#" class="block py-2 px-3 hover:shadow-lg">Careers</a></li>
-                        <li><a href="#" class="block py-2 px-3 hover:shadow-lg">Blog</a></li>
-                        <li><a href="#" class="block py-2 px-3 hover:shadow-lg">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="absolute top-0 right-0">
-                <img src="./img/right-logo.svg" alt="">
-            </div>
-        </nav>
-
-        <div class="container mx-auto px-4 md:px-12 flex flex-col md:flex-row items-center justify-between">
-
-            <div class="text-white max-w-xl space-y-6 py-16 md:py-0">
-                <h1 class="text-4xl md:text-[50px] font-bold leading-tight">
-                    <span class="text-orange-400">Studying</span> Online is now<br />
-                    much <span class="text-white">easier</span>
-                </h1>
-                <p class="text-[26px] text-white/100 font-normal">TOTC is an interesting platform that will teach you in
-                    more an
-                    interactive way</p>
-                <div class="flex items-center gap-6 flex-wrap">
-                    <button class="bg-white/30 text-white text-xl font-semibold px-6 py-3 rounded-full transition">Join
-                        for free</button>
-                    <button class="flex items-center gap-2 text-[#252641] text-xl font-medium">
-                        <span
-                            class="p-[20px] py-[17px] rounded-full text-[#23BDEE] bg-white flex items-center justify-center text-cyan-700 font-bold text-xl mr-4"><i
-                                class="fa-solid fa-play"></i></span>
-                        Watch how it works
-                    </button>
-                </div>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
             </div>
 
-            <div class="relative lg:left-[-26px]">
-                <img src="./img/lovely-teenage-girl-with-curly-hair-posing-yellow-tshirt-min 1.svg" alt="Student"
-                    class="w-[300px] md:w-[380px] lg:w-[450px]" />
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col md:flex-row md:space-x-8 font-medium text-lg mt-4 md:mt-0 p-4 md:p-0 bg-black md:bg-transparent text-white">
+                    <li><a href="index.html" class="block py-2 px-3 hover:text-orange-400">Home</a></li>
+                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400">Courses</a></li>
+                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400">Careers</a></li>
+                    <li><a href="blog.html" class="block py-2 px-3 hover:text-orange-400">Blog</a></li>
+                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400">About Us</a></li>
+                </ul>
+            </div>
+        </div>
 
-                <div
-                    class="absolute top-4 lg:top-[149px] -left-6 lg:left-[-116px] bg-white/80  rounded-xl py-4 px-6 flex items-center gap-3 shadow-md">
-                    <div class="bg-[#23BDEE] px-3 py-2 rounded-lg text-white mr-2">
-                        <i class="fa-regular fa-calendar-days"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-[#595959] font-bold text-xl">250k</h4>
-                        <p class="text-lg text-[#595959]">Assisted Student</p>
+        <div class="absolute top-0 right-0 hidden md:block">
+            <img src="./img/right-logo.svg" alt="">
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-12 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        
+        <div class="text-white max-w-xl space-y-6 py-16 lg:py-0">
+            <h1 class="text-4xl md:text-[50px] font-bold leading-tight">
+                <span class="text-orange-400">Studying</span> Online is now<br />
+                much <span class="text-white">easier</span>
+            </h1>
+            <p class="text-[22px] md:text-[26px] text-white font-normal">
+                TOTC is an interesting platform that will teach you in a more interactive way
+            </p>
+            <div class="flex items-center gap-6 flex-wrap">
+                <button class="bg-white/30 text-white text-lg font-semibold px-6 py-3 rounded-full transition">
+                    Join for free
+                </button>
+                <button class="flex items-center gap-2 text-[#252641] text-lg font-medium">
+                    <span
+                        class="p-[20px] py-[17px] rounded-full text-[#23BDEE] bg-white flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+                    Watch how it works
+                </button>
+            </div>
+        </div>
+
+        <div class="relative lg:left-[-26px] lg:flex-shrink-0 mt-10 lg:mt-0">
+            <img src="./img/lovely-teenage-girl-with-curly-hair-posing-yellow-tshirt-min 1.svg" alt="Student"
+                class="w-[280px] md:w-[380px] lg:w-[450px]" />
+            <div
+                class="absolute top-4 lg:top-[149px] -left-6 lg:left-[-116px] bg-white/80 rounded-xl py-3 px-5 flex items-center gap-3 shadow-md">
+                <div class="bg-[#23BDEE] px-3 py-2 rounded-lg text-white">
+                    <i class="fa-regular fa-calendar-days"></i>
+                </div>
+                <div>
+                    <h4 class="text-[#595959] font-bold text-lg">250k</h4>
+                    <p class="text-sm text-[#595959]">Assisted Student</p>
+                </div>
+            </div>
+
+            <div
+                class="absolute bottom-10 lg:bottom-[75px] text-center left-0 lg:left-[-141px] bg-white/90 rounded-xl shadow-lg p-4">
+                <div class="flex items-center gap-3">
+                    <img src="./img/banjamin-parker-img.svg" class="rounded-full w-12 h-12" />
+                    <div class="text-left">
+                        <h4 class="text-lg font-semibold text-[#595959]">User Experience Class</h4>
+                        <p class="text-sm text-[#595959]">Today at 12.00 PM</p>
                     </div>
                 </div>
+                <button
+                    class="bg-pink-500 hover:bg-pink-600 text-white font-bold text-sm lg:px-6 px-4 py-2 mt-3 rounded-full">
+                    Join Now
+                </button>
+            </div>
+            <div class="absolute top-[100px] right-[-73px] hidden md:block">
+                <img src="./img/pink-line.svg" alt="">
+            </div>
 
-                <div
-                    class="absolute bottom-10 lg:bottom-[75px] text-center left-0 lg:left-[-141px] bg-white/90 rounded-xl shadow-lg p-4">
-                    <div class="flex items-center gap-4 mt-2 lg:mr-2">
-                        <div class="relative">
-                            <img src="./img/banjamin-parker-img.svg" class=" rounded-full" />
-                            <div class="absolute top-10 right-0"><img src="./img/green-dot.svg" alt=""></div>
-                        </div>
-                        <div class="text-left">
-                            <h4 class="text-xl font-semibold text-[#595959]">User Experience Class</h4>
-                            <p class="text-lg text-[#595959]">Today at 12.00 PM</p>
-                        </div>
-                    </div>
-                    <button
-                        class="bg-pink-500 hover:bg-pink-600 text-white/100 font-bold text-lg lg:px-8 px-6 py-2 mt-4          rounded-full">Join
-                        Now</button>
-                </div>
-
-                <div class="absolute top-[100px] right-[-73px]">
-                    <img src="./img/pink-line.svg" alt="">
-                </div>
-                <div
-                    class="absolute top-24 right-0 lg:top-[289px] lg:right-[-46px] bg-white/90 rounded-xl shadow-lg p-4 flex items-center gap-3">
-                    <div class="bg-orange-500 text-white px-3 py-2 rounded-lg">
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sm text-gray-800">Congratulations</h4>
-                        <p class="text-xs text-gray-500">Your admission completed</p>
-                    </div>
+            <div
+                class="absolute top-24 right-0 lg:top-[289px] lg:right-[-46px] bg-white/90 rounded-xl shadow-lg p-3 flex items-center gap-3">
+                <div class="bg-orange-500 text-white px-3 py-2 rounded-lg"><i class="fa-regular fa-envelope"></i></div>
+                <div>
+                    <h4 class="font-semibold text-sm text-gray-800">Congratulations</h4>
+                    <p class="text-xs text-gray-500">Your admission completed</p>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
     <section class="bg-white py-12 px-4 md:px-8 lg:px-16 lg:mt-20 mt-6 max-w-7xl mx-auto ">
         <div class="text-center mb-14">
             <h2 class="text-3xl md:text-5xl  font-bold text-gray-900">Our Success</h2>
