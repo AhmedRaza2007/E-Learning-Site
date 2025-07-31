@@ -14,17 +14,18 @@
 
 <body>
 <header class="bg-cover bg-center" style="background-image: url('./img/header-bg.svg')">
-    <nav class="relative md:px-8">
+    <!-- <nav class="relative md:px-8">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            
+
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./img/totc-img.svg" alt="Logo" />
             </a>
 
             <div class="flex md:order-2 items-center space-x-3">
                 <button type="button"
-                    class="bg-white text-[#5B5B5B] px-6 py-2 text-lg font-semibold rounded-full hover:shadow-lg">
-                    Login
+                    class="bg-white text-[
+#5B5B5B] px-6 py-2 text-lg font-semibold rounded-full hover:shadow-lg">
+                    <a href="login.html">Login</a>
                 </button>
 
                 <button type="button"
@@ -46,7 +47,7 @@
                 <ul
                     class="flex flex-col md:flex-row md:space-x-8 font-medium text-lg mt-4 md:mt-0 p-4 md:p-0 bg-black md:bg-transparent text-white">
                     <li><a href="index.html" class="block py-2 px-3 hover:text-orange-400">Home</a></li>
-                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400">Courses</a></li>
+                    <li><a href="course.html" class="block py-2 px-3 hover:text-orange-400">Courses</a></li>
                     <li><a href="#" class="block py-2 px-3 hover:text-orange-400">Careers</a></li>
                     <li><a href="blog.html" class="block py-2 px-3 hover:text-orange-400">Blog</a></li>
                     <li><a href="#" class="block py-2 px-3 hover:text-orange-400">About Us</a></li>
@@ -57,8 +58,93 @@
         <div class="absolute top-0 right-0 hidden md:block">
             <img src="./img/right-logo.svg" alt="">
         </div>
-    </nav>
+    </nav> -->
+<nav class="relative px-4 md:px-6 lg:px-8 py-4">
+        <div class="max-w-screen-xl mx-auto lg:pl-8">
+            <!-- Responsive grid layout -->
+            <div class="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-2 items-center gap-4">
+                
+                <!-- Logo - Left Column -->
+                <div class="flex items-center justify-start lg:col-span-4 md:col-span-2 col-span-1">
+                   <img src="./img/totc-img.svg" alt="">
+                </div>
 
+                <!-- Desktop Navigation Menu - Center Column -->
+                <div class="hidden lg:flex items-center justify-center lg:col-span-5 ">
+                    <ul class="flex space-x-6 xl:space-x-14 font-medium text-base xl:text-xl text-white ">
+                        <li><a href="index.html" class="hover:text-orange-400 transition-colors whitespace-nowrap">Home</a></li>
+                        <li><a href="./course.html" class="hover:text-orange-400 transition-colors whitespace-nowrap">Courses</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors whitespace-nowrap">Careers</a></li>
+                        <li><a href="./blog.html" class="hover:text-orange-400 transition-colors whitespace-nowrap">Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors whitespace-nowrap">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Medium screens navigation (md) -->
+                <div class="hidden md:flex lg:hidden items-center justify-center md:col-span-4">
+                    <ul class="flex space-x-4 font-medium text-sm text-white">
+                        <li><a href="./index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
+                        <li><a href="./course.html" class="hover:text-orange-400 transition-colors">Courses</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Careers</a></li>
+                        <li><a href="./blog.html" class="hover:text-orange-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right side buttons - Right Column -->
+                <div class="flex items-center justify-end space-x-2 md:space-x-3 lg:col-span-3 md:col-span-2 col-span-1">
+                    <!-- Desktop buttons -->
+                    <div class="hidden md:flex items-center space-x-2 lg:space-x-6">
+                        <button type="button" class="bg-white text-gray-700 px-4 lg:px-6 xl:px-8 py-2 text-sm lg:text-base xl:text-lg font-semibold rounded-full hover:shadow-lg transition-shadow whitespace-nowrap">
+                            <a href="./login.html">Login</a>
+                        </button>
+
+                        <button type="button" class="bg-white/30 text-white px-4 lg:px-6 xl:px-8 py-2 text-sm lg:text-base xl:text-lg font-semibold rounded-full hover:shadow-lg transition-shadow backdrop-blur-sm whitespace-nowrap">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <!-- Mobile buttons -->
+                    <div class="flex md:hidden items-center space-x-2">
+                        <button type="button" class="bg-white text-gray-700 px-3 py-1.5 text-sm font-semibold rounded-full hover:shadow-lg transition-shadow">
+                            <a href="./login.html">Login</a>
+                        </button>
+                         <button type="button" class="bg-white text-gray-700 px-3 py-1.5 text-sm font-semibold rounded-full hover:shadow-lg transition-shadow">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button 
+                        id="mobile-menu-button"
+                        type="button"
+                        class="inline-flex items-center p-2 w-8 h-8 md:w-10 md:h-10 justify-center text-white rounded-lg lg:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors"
+                        aria-controls="mobile-menu" 
+                        aria-expanded="false">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2 font-medium text-lg text-white bg-black/20 rounded-lg p-4 backdrop-blur-sm">
+                    <li><a href="./index.html" class="block py-2 px-3 hover:text-orange-400 transition-colors">Home</a></li>
+                    <li><a href="./course.html" class="block py-2 px-3 hover:text-orange-400 transition-colors">Courses</a></li>
+                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400 transition-colors">Careers</a></li>
+                    <li><a href="./blog.html" class="block py-2 px-3 hover:text-orange-400 transition-colors">Blog</a></li>
+                    <li><a href="#" class="block py-2 px-3 hover:text-orange-400 transition-colors">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Decorative elements in corners -->
+        <div class="absolute top-0 right-0 hidden md:block pointer-events-none">
+            <img src="./img/right-logo.svg" alt="">
+        </div>
+    </nav>
     <div class="container mx-auto px-4 md:px-12 flex flex-col lg:flex-row lg:items-center lg:justify-between">
         
         <div class="text-white max-w-xl space-y-6 py-16 lg:py-0">
@@ -546,7 +632,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4">
-            <div class="lg:my-16 my-6">
+            <div class="lg:my-16 my-6 lg:mt-30">
                 <h2 class="text-4xl font-bold text-black">Explore Course</h2>
                 <p class="text-gray-700 mt-2 text-xl">
                     Ut sed eros finibus, placerat orci id, dapibus.
@@ -630,7 +716,7 @@
         </div>
     </section>
 
-  <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 lg:mb-22">
+  <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 lg:my-30">
     
     <div>
       <div class="flex text-center items-center mb-9">
@@ -755,35 +841,62 @@
       </div>
     </div>
   </section>
-    <footer class="py-12 px-4 bg-[#252641] lg:mt-14">
+<footer class="footer-bg py-16 px-4">
     <div class="max-w-4xl mx-auto text-center">
-
-      <div class="flex items-center justify-center gap-6 mb-14">
-        <div class="flex items-center justify-center">
-          <img src="./img/footer-logo.svg" alt="">
+        
+        <div class="flex items-center justify-center gap-14 mb-16">
+            <div class="flex items-center justify-center">
+                <img src="./img/footer-logo.svg" alt="">
+            </div>
+            
+            <div class="border-l border-gray-400 pl-8 text-left poppins-6">
+                <p class="text-white text-xl leading-tight">Virtual Class</p>
+                <p class="text-white text-xl leading-tight">for Zoom</p>
+            </div>
         </div>
-        <div class="border-l border-gray-500 pl-6 text-left text-xl poppins-6">
-          <p class="text-white">Virtual Class</p>
-          <p class="text-white">for Zoom</p>
+
+        <div class="mb-16">
+            <h3 class="text-gray-300 text-2xl poppins-m mb-8">Subscribe to get our Newsletter</h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+                <input 
+                    type="email" 
+                    placeholder="Your Email"
+                    class="w-full sm:flex-1 px-6 py-3 rounded-full bg-transparent border border-gray-400 text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                >
+                <button class="bg-cyan-400 hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-semibold transition-colors whitespace-nowrap">
+                    Subscribe
+                </button>
+            </div>
         </div>
-      </div>
 
-      <p class="text-2xl poppins-m text-[#B2B3CF] mb-4">Subscribe to get our Newsletter</p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-3 max-w-md mx-auto">
-        <input type="email" placeholder="Your Email"
-          class="w-full sm:flex-1 px-4 py-2 rounded-full bg-transparent border border-gray-500 text-white focus:outline-none">
-        <button class="bg-teal-400 text-white px-6 py-2 rounded-full font-semibold shadow-lg">Subscribe</button>
-      </div>
+        <div class="mb-8">
+            <div class="flex flex-wrap justify-center items-center gap-2 text-gray-300 text-base">
+                <a href="#" class="hover:text-white transition-colors">Careers</a>
+                <span class="text-gray-500 mx-2">|</span>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span class="text-gray-500 mx-2">|</span>
+                <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+            </div>
+        </div>
 
-      <div class="flex flex-wrap justify-center mt-8 lg:mt-14 text-xl text-[#B2B3CF]">
-        <a href="#" class="hover:text-white border-r pr-4">Careers</a>
-        <a href="#" class="hover:text-white border-r px-4">Privacy Policy</a>
-        <a href="#" class="hover:text-white pl-4">Terms & Conditions</a>
-      </div>
-
-      <p class="mt-6 text-[#B2B3CF] text-xl">© 2021 Class Technologies Inc.</p>
+        <div class="text-gray-400 text-base">
+            © 2021 Class Technologies Inc.
+        </div>
     </div>
-  </footer>
+</footer>
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
