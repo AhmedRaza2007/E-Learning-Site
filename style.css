@@ -2,34 +2,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-      font-family: "Nunito Sans", sans-serif;
+        font-family: "Nunito Sans", sans-serif;
 
 }
 
 .roboto-h2 {
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
 }
-.poppins{
+
+.poppins {
         font-family: "Poppins", sans-serif;
-font-weight: 700;
+        font-weight: 700;
 }
-.poppins-6{
+
+.poppins-6 {
         font-family: "Poppins", sans-serif;
-font-weight: 600;
+        font-weight: 600;
 }
-.poppins-b{
+
+.poppins-b {
         font-family: "Poppins", sans-serif;
-font-weight: 700;
-}  
-.poppins-m{
-        font-family: "Poppins", sans-serif;
-font-weight: 500;
+        font-weight: 700;
 }
-.poppins-n{
+
+.poppins-m {
         font-family: "Poppins", sans-serif;
-font-weight: 400;
+        font-weight: 500;
 }
+
+.poppins-n {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+}
+
+.poppins-e {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+}
+
 .footer-bg {
-            background-color: #252641;
+        background-color: #252641;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+        background-color: #25d3a1;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.slider-container {
+        overflow: hidden;
+        position: relative;
+}
+
+.slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+        min-width: 100%;
+}
+
+@media (min-width: 640px) {
+        .testimonial-card {
+                min-width: 50%;
         }
+}
+
+@media (min-width: 1024px) {
+        .testimonial-card {
+                min-width: 25%;
+        }
+}
