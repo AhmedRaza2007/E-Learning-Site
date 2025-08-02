@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Interface</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: #0f766e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .nav-menu {
+            flex: 1;
+            padding: 16px 0;
+        }
+
+        .nav-section {
+            margin-bottom: 24px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(255,255,255,0.15);
+            color: white;
+        }
+
+        .nav-item i {
+            width: 18px;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .nav-item .count {
+            margin-left: auto;
+            color: rgba(255,255,255,0.6);
+            font-size: 12px;
+        }
+
+        .nav-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 16px 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            background: white;
+        }
+
+        /* Email List */
+        .email-list {
+            width: 400px;
+            border-right: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .email-header {
+            padding: 24px 24px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .header-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .icon-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+
+        .icon-btn:hover {
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 16px 10px 40px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f8fafc;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #0f766e;
+            background: white;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .email-filters {
+            padding: 16px 24px;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            gap: 16px;
+        }
+
+        .filter-tab {
+            font-size: 13px;
+            color: #64748b;
+            cursor: pointer;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .filter-tab.active {
+            color: #0f766e;
+            border-bottom-color: #0f766e;
+        }
+
+        .emails {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .email-item {
+            padding: 16px 24px;
+            border-bottom: 1px solid #f1f5f9;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: flex;
+            gap: 12px;
+        }
+
+        .email-item:hover {
+            background: #f8fafc;
+        }
+
+        .email-item.unread {
+            background: #fefefe;
+            border-left: 3px solid #0f766e;
+        }
+
+        .email-checkbox {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 2px;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .email-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .email-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+
+        .email-sender {
+            font-weight: 500;
+            color: #1e293b;
+            font-size: 14px;
+        }
+
+        .email-time {
+            color: #64748b;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .email-subject {
+            font-size: 14px;
+            color: #1e293b;
+            margin-bottom: 4px;
+            font-weight: 400;
+        }
+
+        .email-preview {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .email-tags {
+            display: flex;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        .email-tag {
+            padding: 2px 6px;
+            background: #fef3c7;
+            color: #92400e;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .email-tag.important {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        /* Activity Panel */
+        .activity-panel {
+            flex: 1;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            min-width: 320px;
+        }
+
+        .activity-header {
+            padding: 24px 24px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .activity-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 16px;
+        }
+
+        .activity-tabs {
+            display: flex;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .activity-tab {
+            padding: 8px 16px;
+            color: #64748b;
+            font-size: 14px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .activity-tab.active {
+            color: #0f766e;
+            border-bottom-color: #0f766e;
+        }
+
+        .activity-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 24px;
+        }
+
+        .activity-date {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .activity-icon.message {
+            background: #3b82f6;
+        }
+
+        .activity-icon.task {
+            background: #10b981;
+        }
+
+        .activity-icon.file {
+            background: #f59e0b;
+        }
+
+        .activity-icon.meeting {
+            background: #8b5cf6;
+        }
+
+        .activity-details {
+            flex: 1;
+        }
+
+        .activity-details h4 {
+            font-size: 14px;
+            color: #1e293b;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .activity-details p {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .activity-time {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        /* Mobile styles */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: #0f766e;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        @media (max-width: 1200px) {
+            .activity-panel {
+                display: none;
+            }
+            .email-list {
+                width: auto;
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 999;
+                transform: translateX(-100%);
+                height: 100vh;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .overlay.show {
+                display: block;
+            }
+
+            .email-header {
+                padding-left: 60px;
+            }
+
+            .email-list {
+                width: 100%;
+            }
+
+            .email-item {
+                padding: 12px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .email-header {
+                padding: 16px;
+                padding-left: 60px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .email-filters {
+                padding: 12px 16px;
+                overflow-x: auto;
+            }
+
+            .emails {
+                padding: 0 8px;
+            }
+
+            .email-item {
+                padding: 12px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .email-header-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+               <a href="about.html"> <img src="./img/totc-img.svg" alt=""></a>
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-section">
+                    <div class="nav-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="nav-item active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Inbox</span>
+                        <span class="count">12</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Sent Items</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-star"></i>
+                        <span>Important</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Drafts</span>
+                        <span class="count">3</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-archive"></i>
+                        <span>Archive</span>
+                    </div>
+                </div>
+
+                <div class="nav-divider"></div>
+
+                <div class="nav-section">
+                    <div class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Contacts</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tasks</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reports</span>
+                    </div>
+                </div>
+
+                <div class="nav-divider"></div>
+
+                <div class="nav-section">
+                    <div class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-life-ring"></i>
+                        <span>Help</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="email-list">
+                <div class="email-header">
+                    <div class="header-top">
+                        <h2 class="header-title">Contacts</h2>
+                        <div class="header-actions">
+                            <button class="icon-btn">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                            <button class="icon-btn">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                            <button class="icon-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search contacts...">
+                    </div>
+                </div>
+
+                <div class="email-filters">
+                    <div class="filter-tab active">All Contacts</div>
+                    <div class="filter-tab">Recent</div>
+                    <div class="filter-tab">Favorites</div>
+                </div>
+
+                <div class="emails">
+                    <div class="email-item unread">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">John Mitchell</span>
+                                <span class="email-time">2:30 PM</span>
+                            </div>
+                            <div class="email-subject">Project Update - Q4 Planning</div>
+                            <div class="email-preview">Hi team, I wanted to share the latest updates on our Q4 planning initiatives. We've made significant progress on the roadmap and I'd like to schedule a meeting to discuss next steps...</div>
+                            <div class="email-tags">
+                                <span class="email-tag important">Important</span>
+                                <span class="email-tag">Work</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">Sarah Williams</span>
+                                <span class="email-time">1:15 PM</span>
+                            </div>
+                            <div class="email-subject">Design Review Feedback</div>
+                            <div class="email-preview">Thanks for sharing the latest designs. I've reviewed them and have some feedback. Overall the direction looks great, but I have a few suggestions for improvement...</div>
+                        </div>
+                    </div>
+
+                    <div class="email-item unread">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">Marketing Team</span>
+                                <span class="email-time">11:45 AM</span>
+                            </div>
+                            <div class="email-subject">Campaign Performance Report</div>
+                            <div class="email-preview">Here's this week's campaign performance summary. We've seen a 15% increase in engagement rates and our conversion metrics are looking strong...</div>
+                            <div class="email-tags">
+                                <span class="email-tag">Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">Alex Thompson</span>
+                                <span class="email-time">10:20 AM</span>
+                            </div>
+                            <div class="email-subject">Meeting Reschedule Request</div>
+                            <div class="email-preview">Hi, I need to reschedule our 3 PM meeting today. Would tomorrow at the same time work for you? I have a client call that came up unexpectedly...</div>
+                        </div>
+                    </div>
+
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">Lisa Chen</span>
+                                <span class="email-time">9:15 AM</span>
+                            </div>
+                            <div class="email-subject">Budget Approval Update</div>
+                            <div class="email-preview">Good news! The budget for the new project has been approved. I'll send over the detailed breakdown shortly. Let's schedule a kickoff meeting...</div>
+                        </div>
+                    </div>
+
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">David Rodriguez</span>
+                                <span class="email-time">Yesterday</span>
+                            </div>
+                            <div class="email-subject">Code Review Complete</div>
+                            <div class="email-preview">I've completed the code review for the authentication module. Overall looks solid. I left a few comments on the pull request for minor improvements...</div>
+                        </div>
+                    </div>
+
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="email-content">
+                            <div class="email-header-row">
+                                <span class="email-sender">Jennifer Park</span>
+                                <span class="email-time">Yesterday</span>
+                            </div>
+                            <div class="email-subject">Training Session Reminder</div>
+                            <div class="email-preview">Don't forget about the team training session scheduled for Friday at 2 PM. We'll be covering the new project management tools and workflows...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-panel">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity Timeline</h3>
+                    <div class="activity-tabs">
+                        <div class="activity-tab active">All Activity</div>
+                        <div class="activity-tab">Messages</div>
+                        <div class="activity-tab">Tasks</div>
+                    </div>
+                </div>
+
+                <div class="activity-content">
+                    <div class="activity-date">Today</div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon message">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>New Message</h4>
+                            <p>Sarah Williams sent you a message about the design review feedback.</p>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon task">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Task Completed</h4>
+                            <p>John Mitchell marked "Q4 Planning Document" as completed.</p>
+                            <div class="activity-time">4 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon file">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>File Uploaded</h4>
+                            <p>Marketing Team uploaded campaign_report_q4.pdf to the shared folder.</p>
+                            <div class="activity-time">6 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-date">Yesterday</div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon meeting">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Meeting Scheduled</h4>
+                            <p>Alex Thompson scheduled a project kickoff meeting for next Tuesday.</p>
+                            <div class="activity-time">Yesterday, 3:30 PM</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon task">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Team Member Added</h4>
+                            <p>Lisa Chen was added to the Development Team workspace.</p>
+                            <div class="activity-time">Yesterday, 11:15 AM</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon message">
+                            <i class="fas fa-reply"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Message Reply</h4>
+                            <p>David Rodriguez replied to your message about the code review.</p>
+                            <div class="activity-time">Yesterday, 9:45 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                sidebar.classList.remove('open');
+                document.querySelector('.overlay').classList.remove('show');
+            }
+        });
+
+        // Handle email item clicks
+        document.querySelectorAll('.email-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.remove('unread');
+            });
+        });
+
+        // Handle filter tab clicks
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Handle activity tab clicks
+        document.querySelectorAll('.activity-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.activity-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Handle nav item clicks
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                
+                if (window.innerWidth <= 768) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // Handle checkbox clicks
+        document.querySelectorAll('.checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.style.background = this.style.background ? '' : '#0f766e';
+                this.innerHTML = this.innerHTML ? '' : '<i class="fas fa-check" style="color: white; font-size: 10px;"></i>';
+            });
+        });
+    </script>
+</body>
+</html>
