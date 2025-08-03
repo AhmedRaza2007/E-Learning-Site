@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/ca86787c55.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="checkout.css" />
+    <title>Checkout page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="relative px-4 md:px-6 lg:px-8 py-4 lg:py-10">
+        <div class="max-w-screen-xl mx-auto lg:pl-8">
+          <div
+            class="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-2 items-center gap-4"
+          >
+            <div
+              class="flex items-center justify-start lg:col-span-4 md:col-span-2"
+            >
+              <img src="./img/blog.logo.svg" alt="" />
+            </div>
+
+            <div
+              class="hidden lg:flex items-center justify-center lg:col-span-6"
+            >
+              <ul
+                class="flex space-x-6 xl:space-x-16 font-medium text-base xl:text-xl text-[#5B5B5B]"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="hover:text-orange-400 transition-colors whitespace-nowrap"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./course.html"
+                    class="hover:text-orange-400 transition-colors whitespace-nowrap"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-orange-400 transition-colors whitespace-nowrap"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="hover:text-orange-400 transition-colors whitespace-nowrap"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-orange-400 transition-colors whitespace-nowrap"
+                    >About Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="hidden md:flex lg:hidden items-center justify-center md:col-span-4"
+            >
+              <ul class="flex space-x-4 font-medium text-sm text-[#5B5B5B]">
+                <li>
+                  <a
+                    href="./index.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./course.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex items-center justify-end space-x-2 md:space-x-3 lg:col-span-2"
+            >
+              <div class="hidden md:flex items-center space-x-2 lg:space-x-6">
+                <button
+                  id="profileDropdownBtn"
+                  type="button"
+                  class="flex items-center space-x-2"
+                >
+                  <img
+                    src="./img/profile-img.svg"
+                    alt="Profile"
+                    class="object-cover"
+                  />
+                  <span class="text-lg font-semibold text-gray-800">Lina</span>
+                  <svg
+                    class="w-4 h-4 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  id="profileDropdownMenu"
+                  class="hidden absolute top-12 right-0 bg-white border rounded-md shadow-md w-40 z-50"
+                >
+                  <a
+                    href="profile.html"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Profile</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Settings</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Logout</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex md:hidden items-center space-x-2">
+                <button
+                  id="profileDropdownBtn"
+                  type="button"
+                  class="flex items-center space-x-2"
+                >
+                  <img
+                    src="./img/profile-img.svg"
+                    alt="Profile"
+                    class="object-cover"
+                  />
+                  <span class="text-lg font-semibold text-gray-800">Lina</span>
+                  <svg
+                    class="w-4 h-4 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  id="profileDropdownMenu"
+                  class="hidden absolute top-12 right-0 bg-white border rounded-md shadow-md w-40 z-50"
+                >
+                  <a
+                    href="profile.html"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Profile</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Settings</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                    >Logout</a
+                  >
+                </div>
+              </div>
+
+              <button
+                id="mobile-menu-button"
+                type="button"
+                class="inline-flex items-center p-2 w-8 h-8 md:w-10 md:h-10 justify-center text-black rounded-lg lg:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <svg
+                  class="w-4 h-4 md:w-5 md:h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <ul
+              class="flex flex-col space-y-2 font-medium text-lg text-white bg-[#49BBBD] rounded-lg p-4 backdrop-blur-sm"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="block py-2 px-3 hover:text-orange-400 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./course.html"
+                  class="block py-2 px-3 hover:text-orange-400 transition-colors"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 hover:text-orange-400 transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./blog.html"
+                  class="block py-2 px-3 hover:text-orange-400 transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 px-3 hover:text-orange-400 transition-colors"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="absolute top-0 right-0 hidden md:block pointer-events-none">
+          <img src="./img/right-logo.svg" alt="" />
+        </div>
+      </nav>
+    </header>
+    <section class="max-w-7xl mx-auto">
+      <div
+        class="flex justify-center grid grid-cols-1 lg:grid-cols-2 gap-10 p-6"
+      >
+        <div
+          class="p-6 px-8 bg-white shadow-lg rounded-xl border border-[#FCFCFD]"
+        >
+          <h2 class="text-3xl font-semibold mb-3 lg:pt-6">Checkout</h2>
+          <h6 class="text-lg text-[#5B5B5B] font-semibold mb-2">Cart Type</h6>
+
+          <div class="flex items-center gap-4 mb-12">
+            <img
+              src="./img/paypal-2014-logo.svg"
+              class="w-23 h-22 object-contain"
+            />
+            <img
+              src="./img/American-Express-logo.svg"
+              class="w-26 h-26 object-contain"
+            />
+            <img src="./img/visa-logo.svg" class="w-26 h-26 object-contain" />
+            <img
+              src="./img/mastercard-logo.jpg"
+              class="w-26 h-26 object-contain"
+            />
+          </div>
+
+          <form class="space-y-6">
+            <div>
+              <label class="block text-lg font-semibold mb-3 text-[#5B5B5B]"
+                >Name on Card</label
+              >
+              <input
+                type="text"
+                placeholder="Enter name on Card"
+                class="w-full border border-[#D9D9D9] rounded-lg px-4 py-4 focus:ring-2 focus:ring-[#D9D9D9]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-lg font-semibold mb-3 text-[#5B5B5B]"
+                >Card Number</label
+              >
+              <input
+                type="text"
+                placeholder="Enter Card Number"
+                class="w-full border border-[#D9D9D9] rounded-lg px-4 py-4 focus:ring-2 focus:ring-[#D9D9D9]"
+              />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-lg font-semibold mb-3 text-[#5B5B5B]"
+                  >Expiration Date (MM/YY)</label
+                >
+                <input
+                  type="text"
+                  placeholder="MM/YY"
+                  class="w-full border border-[#D9D9D9] rounded-lg px-4 py-4 focus:ring-2 focus:ring-[#D9D9D9]"
+                />
+              </div>
+              <div>
+                <label class="block text-lg font-semibold mb-3 text-[#5B5B5B]"
+                  >CVC</label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter CVC"
+                  class="w-full border border-[#D9D9D9] rounded-lg px-4 py-4 focus:ring-2 focus:ring-[#D9D9D9]"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-[#5B5B5B] lg:mb-10">
+              <input type="checkbox" id="save-info" class="w-4 h-4" />
+              <label for="save-info" class="text-lg"
+                >Save my information for faster checkout</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-[#49BBBD] hover:bg-teal-600 text-lg text-white py-3.5 rounded-lg font-medium transition mb-3"
+            >
+              Confirm Payment
+            </button>
+          </form>
+        </div>
+
+        <div class="bg-[#EBF5FF] rounded-xl p-6 lg:h-[630px]">
+          <h3 class="text-xl font-normal text-[#252641] lg:mb-13 mb-6 lg:pt-2">
+            Summary
+          </h3>
+
+          <div class="flex items-center gap-4 mb-4">
+            <img
+              src="/img/confident-teacher-explaining-lesson-pupils.svg"
+              class="object-cover"
+            />
+            <div>
+              <p class="text-lg text-black font-normal">
+                adipising elit, sed do eiusmod tempor
+              </p>
+              <p class="text-lg text-[#5B5B5B]">Lorem ipsum dollar...</p>
+              <p class="font-normal text-xl">$24.69</p>
+            </div>
+          </div>
+          <hr class="my-4 text-[#5B5B5B]" />
+
+          <div class="flex items-center gap-4 mb-4">
+            <img
+              src="/img/confident-teacher-explaining-lesson-pupils.svg"
+              class="object-cover"
+            />
+            <div>
+              <p class="text-lg text-black font-normal">
+                Sed do eiusmod tempor incididunt
+              </p>
+              <p class="text-lg text-[#5B5B5B]">Lorem ipsum dollar...</p>
+              <p class="font-normal text-xl">$24.69</p>
+            </div>
+          </div>
+
+          <hr class="my-4 text-[#5B5B5B]" />
+
+          <div
+            class="flex justify-between text-[#5B5B5B] font-semibold text-xl"
+          >
+            <span>Subtotal</span>
+            <span>$51.38</span>
+          </div>
+          <hr class="my-4 text-[#5B5B5B]" />
+
+          <div
+            class="flex justify-between text-[#5B5B5B] font-semibold text-xl"
+          >
+            <span>Coupon Discount</span>
+            <span>0%</span>
+          </div>
+          <hr class="my-4 text-[#5B5B5B]" />
+
+          <div
+            class="flex justify-between text-[#5B5B5B] font-semibold text-xl"
+          >
+            <span>TAX</span>
+            <span>$5</span>
+          </div>
+
+          <hr class="my-4" />
+
+          <div class="flex justify-between font-semibold text-xl">
+            <span>Total</span>
+            <span>$56.38</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="max-w-7xl mx-auto px-4 py-10 lg:my-20">
+        <div class="flex justify-between items-center pb-12">
+          <h2 class="text-3xl font-medium">Top Education offers and deals are listed here</h2>
+          <a href="#" class="text-[#49BBBD] text-lg font-semibold">See all</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="relative rounded-2xl overflow-hidden">
+            <img
+              src="./img/google-meeting-img.svg"
+              alt="Card Image"
+              class="object-cover"
+            />
+
+            <div
+              class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3"
+            >
+              <div
+                class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg"
+              >
+                50%
+              </div>
+              <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+              <p class="text-xl font-medium text-white lg:w-[288px]">
+                Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+                eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+                elit, sed do eiusmod tempor
+              </p>
+            </div>
+          </div>
+
+           <div class="relative rounded-2xl overflow-hidden">
+            <img
+              src="./img/checkout-card-img.svg"
+              alt="Card Image"
+              class="object-cover"
+            />
+
+            <div
+              class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3"
+            >
+              <div
+                class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg"
+              >
+                10%
+              </div>
+              <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+              <p class="text-xl font-medium text-white lg:w-[288px]">
+                Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+                eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+                elit, sed do eiusmod tempor
+              </p>
+            </div>
+          </div>
+
+           <div class="relative rounded-2xl overflow-hidden">
+            <img
+              src="./img/cat-img.svg"
+              alt="Card Image"
+              class="object-cover"
+            />
+
+            <div
+              class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3"
+            >
+              <div
+                class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg"
+              >
+                50%
+              </div>
+              <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+              <p class="text-xl font-medium text-white lg:w-[288px]">
+                Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+                eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+                elit, sed do eiusmod tempor
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <footer class="footer-bg py-16 px-4 mt-16">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <div class="flex items-center justify-center gap-14 mb-16">
+        <div class="flex items-center justify-center">
+         <a href="about.html"> <img src="./img/footer-logo.svg" alt=""></a>
+        </div>
+
+        <div class="border-l border-gray-400 pl-8 text-left poppins-6">
+          <p class="text-white text-xl leading-tight">Virtual Class</p>
+          <p class="text-white text-xl leading-tight">for Zoom</p>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h3 class="text-gray-300 text-2xl poppins-m mb-8">Subscribe to get our Newsletter</h3>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+          <input type="email" placeholder="Your Email"
+            class="w-full sm:flex-1 px-6 py-3 rounded-full bg-transparent border border-gray-400 text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors">
+          <button
+            class="bg-[#49BBBD] hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-semibold transition-colors whitespace-nowrap">
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-wrap justify-center items-center gap-2 text-gray-300 text-base">
+          <a href="#" class="hover:text-white transition-colors">Careers</a>
+          <span class="text-gray-500 mx-2">|</span>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span class="text-gray-500 mx-2">|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+      </div>
+
+      <div class="text-gray-400 text-base">
+        © 2021 Class Technologies Inc.
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
