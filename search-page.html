@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/ca86787c55.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="checkout.css">
+    <title>Search Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="relative px-4 md:px-6 lg:px-8 py-4">
+            <div class="max-w-screen-xl mx-auto lg:pl-8">
+                <div class="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-2 items-center gap-4">
+
+                    <div class="flex items-center justify-start lg:col-span-5 md:col-span-2 col-span-1">
+                        <img src="./img/blog.logo.svg" alt="Logo">
+                    </div>
+
+                    <div class="hidden lg:flex items-center justify-center lg:col-span-5 ">
+                        <ul class="flex space-x-6 xl:space-x-14 font-medium text-base xl:text-xl ">
+                            <li><a href="index.html"
+                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Home</a></li>
+                            <li><a href="./course.html"
+                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Courses</a></li>
+                            <li><a href="#"
+                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Careers</a></li>
+                            <li><a href="./blog.html"
+                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Blog</a></li>
+                            <li><a href="about.html"
+                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden md:flex lg:hidden items-center justify-center md:col-span-4">
+                        <ul class="flex space-x-4 font-medium text-sm text-white">
+                            <li><a href="./index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
+                            <li><a href="./course.html" class="hover:text-orange-400 transition-colors">Courses</a></li>
+                            <li><a href="#" class="hover:text-orange-400 transition-colors">Careers</a></li>
+                            <li><a href="./blog.html" class="hover:text-orange-400 transition-colors">Blog</a></li>
+                            <li><a href="about.html" class="hover:text-orange-400 transition-colors">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-end space-x-2 md:space-x-3 lg:col-span-2 md:col-span-2 col-span-1">
+                        <div class="hidden md:flex items-center space-x-2 lg:space-x-6">
+                            <div>
+                                <button id="profileDropdownBtn" type="button" class="flex items-center space-x-2">
+                                    <img src="./img/profile-img.svg" alt="Profile" class=" object-cover">
+                                    <span class="text-lg font-semibold text-gray-800">Lina</span>
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                        stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div id="profileDropdownMenu"
+                                    class="hidden absolute top-12 right-0 bg-white border rounded-md shadow-md w-40 z-50">
+                                    <a href="profile.html"
+                                        class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Profile</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Settings</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="mobile-menu-button" type="button"
+                            class="inline-flex items-center p-2 w-10 h-10 md:w-10 md:h-10 justify-center text-black rounded-lg lg:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <ul
+                        class="flex flex-col space-y-2 font-medium text-lg text-white bg-[#49BBBD] rounded-lg p-4 backdrop-blur-sm">
+                        <li><a href="./index.html"
+                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Home</a></li>
+                        <li><a href="./course.html"
+                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Courses</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:text-orange-400 transition-colors">Careers</a></li>
+                        <li><a href="./blog.html"
+                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Blog</a></li>
+                        <li><a href="about.html" class="block py-2 px-3 hover:text-orange-400 transition-colors">About
+                                Us</a></li>
+                        <li class="pt-2 border-t border-white/20">
+                            <a href="./login.html"
+                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Login</a>
+                        </li>
+                        <li>
+                            <a href="./register.html"
+                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-cover bg-center py-12 px-4" style="background-image: url('./img/serach-bg-img.svg');">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="flex flex-col lg:flex-row items-center gap-4 justify-center mb-6 w-full lg:w-[964px] bg-white rounded-lg mx-auto">
+                <input type="text" placeholder="Search your favourite course"
+                    class="w-full lg:w-[812px] px-8 py-4.5 rounded-lg focus:outline-none focus:ring-0 focus:ring-white text-gray-700" />
+                <button class="bg-teal-500 text-xl text-white px-8 mr-2 py-3 rounded-lg font-bold hover:bg-teal-600 ">
+                    Search
+                </button>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <div class="relative">
+                        <button id="subject-dropdown" data-dropdown-toggle="subject-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Subject</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="subject-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-sm text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Computer Science</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Business</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="partner-dropdown" data-dropdown-toggle="partner-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Partner</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="partner-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-sm text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">University A</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">University B</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Company X</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Organization Y</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="program-dropdown" data-dropdown-toggle="program-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Program</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="program-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-xl font-medium text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Certificate</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Diploma</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bachelor's</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Master's</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="language-dropdown" data-dropdown-toggle="language-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Language</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-xl font-medium text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">English</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Spanish</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">French</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">German</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="availability-dropdown" data-dropdown-toggle="availability-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Availability</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="availability-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-xl font-medium text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Available Now</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Starting Soon</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Upcoming</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Self-paced</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="learning-type-dropdown" data-dropdown-toggle="learning-type-menu"
+                            class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
+                            <span class="mr-2">Learning Type</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="learning-type-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
+                            <ul class="py-2 text-lg font-medium text-[#252641]">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Online</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blended</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">In-person</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Recorded</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Profile dropdown toggle
+        document.getElementById('profileDropdownBtn').addEventListener('click', function () {
+            document.getElementById('profileDropdownMenu').classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function (e) {
+            if (!document.getElementById('profileDropdownBtn').contains(e.target)) {
+                document.getElementById('profileDropdownMenu').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
