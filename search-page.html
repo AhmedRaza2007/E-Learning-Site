@@ -14,8 +14,8 @@
 
 <body>
     <header>
-        <nav class="relative px-4 md:px-6 lg:px-8 py-4">
-            <div class="max-w-screen-xl mx-auto lg:pl-8">
+        <nav class="px-4 md:px-6 lg:px-8 py-4">
+            <div class="max-w-7xl mx-auto lg:pl-8">
                 <div class="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-2 items-center gap-4">
 
                     <div class="flex items-center justify-start lg:col-span-5 md:col-span-2 col-span-1">
@@ -23,17 +23,12 @@
                     </div>
 
                     <div class="hidden lg:flex items-center justify-center lg:col-span-5 ">
-                        <ul class="flex space-x-6 xl:space-x-14 font-medium text-base xl:text-xl ">
-                            <li><a href="index.html"
-                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Home</a></li>
-                            <li><a href="./course.html"
-                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Courses</a></li>
-                            <li><a href="#"
-                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Careers</a></li>
-                            <li><a href="./blog.html"
-                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">Blog</a></li>
-                            <li><a href="about.html"
-                                    class="hover:text-orange-400 transition-colors whitespace-nowrap">About Us</a></li>
+                        <ul class="flex lg:space-x-9 space-x-6 font-medium text-xl">
+                            <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+                            <li><a href="./course.html" class="hover:text-orange-400">Courses</a></li>
+                            <li><a href="#" class="hover:text-orange-400">Careers</a></li>
+                            <li><a href="./blog.html" class="hover:text-orange-400">Blog</a></li>
+                            <li><a href="about.html" class="hover:text-orange-400">About Us</a></li>
                         </ul>
                     </div>
 
@@ -85,22 +80,17 @@
                 <div id="mobile-menu" class="hidden md:hidden mt-4">
                     <ul
                         class="flex flex-col space-y-2 font-medium text-lg text-white bg-[#49BBBD] rounded-lg p-4 backdrop-blur-sm">
-                        <li><a href="./index.html"
-                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Home</a></li>
-                        <li><a href="./course.html"
-                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Courses</a></li>
-                        <li><a href="#" class="block py-2 px-3 hover:text-orange-400 transition-colors">Careers</a></li>
-                        <li><a href="./blog.html"
-                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Blog</a></li>
-                        <li><a href="about.html" class="block py-2 px-3 hover:text-orange-400 transition-colors">About
+                        <li><a href="./index.html" class="block py-2 px-3 hover:text-orange-400">Home</a></li>
+                        <li><a href="./course.html" class="block py-2 px-3 hover:text-orange-400">Courses</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:text-orange-400">Careers</a></li>
+                        <li><a href="./blog.html" class="block py-2 px-3 hover:text-orange-400">Blog</a></li>
+                        <li><a href="about.html" class="block py-2 px-3 hover:text-orange-400">About
                                 Us</a></li>
                         <li class="pt-2 border-t border-white/20">
-                            <a href="./login.html"
-                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Login</a>
+                            <a href="./login.html" class="block py-2 px-3 hover:text-orange-400">Login</a>
                         </li>
                         <li>
-                            <a href="./register.html"
-                                class="block py-2 px-3 hover:text-orange-400 transition-colors">Sign Up</a>
+                            <a href="./register.html" class="block py-2 px-3 hover:text-orange-400">Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -125,11 +115,7 @@
                         <button id="subject-dropdown" data-dropdown-toggle="subject-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Subject</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="subject-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-sm text-[#252641]">
@@ -145,11 +131,7 @@
                         <button id="partner-dropdown" data-dropdown-toggle="partner-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Partner</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="partner-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-sm text-[#252641]">
@@ -165,11 +147,7 @@
                         <button id="program-dropdown" data-dropdown-toggle="program-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Program</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="program-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-xl font-medium text-[#252641]">
@@ -185,11 +163,7 @@
                         <button id="language-dropdown" data-dropdown-toggle="language-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Language</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="language-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-xl font-medium text-[#252641]">
@@ -205,11 +179,7 @@
                         <button id="availability-dropdown" data-dropdown-toggle="availability-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Availability</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="availability-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-xl font-medium text-[#252641]">
@@ -225,11 +195,7 @@
                         <button id="learning-type-dropdown" data-dropdown-toggle="learning-type-menu"
                             class="flex items-center justify-between w-full md:w-auto px-4 py-2.5 text-[#252641] text-xl font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-[#49BBBD]/50">
                             <span class="mr-2">Learning Type</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <div id="learning-type-menu" class="hidden z-10 w-44 bg-white rounded-lg shadow-lg">
                             <ul class="py-2 text-lg font-medium text-[#252641]">
@@ -252,17 +218,17 @@
                     <img src="./img/class-room-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -270,11 +236,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -283,17 +249,17 @@
                     <img src="./img/mac-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -301,11 +267,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -314,17 +280,17 @@
                     <img src="./img/keyborad-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -332,11 +298,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -345,17 +311,17 @@
                     <img src="./img/mac-side-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -363,11 +329,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -378,17 +344,17 @@
                     <img src="./img/mac-front-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -396,11 +362,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -409,17 +375,17 @@
                     <img src="./img/type.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -427,11 +393,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -440,17 +406,17 @@
                     <img src="./img/title-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -458,11 +424,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -471,17 +437,17 @@
                     <img src="./img/mac-look-img.svg" alt="Course" class=" object-cover">
                     <div class="py-4">
                         <div class="flex justify-between text-sm text-gray-500 mb-4">
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">Design</span>
                             </span>
-                            <span class="flex items-center space-x-1 poppins-m">
+                            <span class="flex items-center space-x-1 font-medium">
                                 <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
                                 <span class="text-[#696984]">3 Month</span>
                             </span>
                         </div>
 
-                        <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
                         <p class="text-lg text-gray-500 mt-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         </p>
@@ -489,11 +455,11 @@
                         <div class="flex justify-between items-center mt-4">
                             <div class="flex items-center space-x-2">
                                 <img src="./img/lina-img.svg" alt="Lina">
-                                <span class="text-lg poppins-m text-black">Lina</span>
+                                <span class="text-lg font-medium text-black">Lina</span>
                             </div>
                             <div class="text-sm">
                                 <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
                             </div>
                         </div>
                     </div>
@@ -527,8 +493,7 @@
                         </li>
                     </ul>
 
-                    <button
-                        class="bg-[#49BBBD] lg:mt-2 text-white px-8 py-5 rounded-xl text-2xl font-bold">
+                    <button class="bg-[#49BBBD] lg:mt-2 text-white px-8 py-5 rounded-xl text-2xl font-bold">
                         Start learning now
                     </button>
                 </div>
@@ -538,144 +503,344 @@
                 </div>
             </div>
     </section>
-  <section class="bg-[#EBF5FF] py-24 px-4 mt-18">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl lg:text-3xl poppins-m">Recommended for you</h2>
-        <a href="#" class="text-[#49BBBD] poppins-m text-xl hover:underline">See all</a>
+    <section class="bg-[#EBF5FF] py-24 px-4 mt-18">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl lg:text-3xl font-medium">Recommended for you</h2>
+                <a href="#" class="text-[#49BBBD] font-medium text-xl hover:underline">See all</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
+                    <img src="./img/course.svg" alt="Course" class=" object-cover">
+                    <div class="py-4">
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">Design</span>
+                            </span>
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">3 Month</span>
+                            </span>
+                        </div>
+
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
+                        <p class="text-lg text-gray-500 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./img/lina-img.svg" alt="Lina">
+                                <span class="text-lg font-medium text-black">Lina</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
+                    <img src="./img/type.svg" alt="Course" class=" object-cover">
+                    <div class="py-4">
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">Design</span>
+                            </span>
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">3 Month</span>
+                            </span>
+                        </div>
+
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
+                        <p class="text-lg text-gray-500 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./img/lina-img.svg" alt="Lina">
+                                <span class="text-lg font-medium text-black">Lina</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
+                    <img src="./img/title-img.svg" alt="Course" class=" object-cover">
+                    <div class="py-4">
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">Design</span>
+                            </span>
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">3 Month</span>
+                            </span>
+                        </div>
+
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
+                        <p class="text-lg text-gray-500 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./img/lina-img.svg" alt="Lina">
+                                <span class="text-lg font-medium text-black">Lina</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
+                    <img src="./img/mac-side-img.svg" alt="Course" class=" object-cover">
+                    <div class="py-4">
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">Design</span>
+                            </span>
+                            <span class="flex items-center space-x-1 font-medium">
+                                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
+                                <span class="text-[#696984]">3 Month</span>
+                            </span>
+                        </div>
+
+                        <h3 class="text-[23px] font-medium text-gray-800">AWS Certified solutions Architect</h3>
+                        <p class="text-lg text-gray-500 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./img/lina-img.svg" alt="Lina">
+                                <span class="text-lg font-medium text-black">Lina</span>
+                            </div>
+                            <div class="text-sm">
+                                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
+                                <span class="text-[#49BBBD] text-2xl font-bold">$80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 lg:py-30 py-10">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-3xl font-medium text-shadow-lg">Choose the right mentor</h2>
+            <a href="#" class="text-xl text-[#49BBBD] font-bold text-shadow-lg hover:underline">See all</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+            <div class="relative flex justify-end items-end h-[361px]">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/jane-cooper.png"
+                    alt="Jane Cooper">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Jane Cooper</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+             <div class="relative flex justify-end items-end">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/adam.svg"
+                    alt="Adam">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Adam</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+            <div class="relative flex justify-end items-end">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/tomara.svg"
+                    alt="Tomara">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Tomara</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+            <div class="relative flex justify-end items-end h-[361px]">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/jane-cooper.png"
+                    alt="Jane Cooper">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Jane Cooper</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+             <div class="relative flex justify-end items-end h-[361px]">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/jane-cooper.png"
+                    alt="Jane Cooper">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Jane Cooper</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+             <div class="relative flex justify-end items-end h-[361px]">
+                <img class="object-cover lg:w-[238px] absolute left-[88px] top-1" src="./img/jane-cooper.png"
+                    alt="Jane Cooper">
+                <div class="bg-white rounded shadow p-6 text-center lg:pt-30">
+                    <h3 class="text-xl font-medium text-[#252641]">Jane Cooper</h3>
+                    <p class="text-[#696984] mt-1 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="bg-[#EBF5FF]">
+      <div class="max-w-7xl mx-auto py-20">
+    <h2 class="text-2xl md:text-3xl font-medium pb-16 text-black">
+      What our students have to say
+    </h2>
+
+    <div class="bg-white rounded-3xl flex grid grid-cols-1 lg:grid-cols-12 items-center shadow-lg">
+      <div class="mb-6 lg:my-10 lg:mx-12 pt-12 col-span-6">
+       <img src="./img/student.svg" alt="">
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
-          <img src="./img/course.svg" alt="Course" class=" object-cover">
-          <div class="py-4">
-            <div class="flex justify-between text-sm text-gray-500 mb-4">
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">Design</span>
-              </span>
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">3 Month</span>
-              </span>
-            </div>
+      <div class="flex-1 text-center lg:text-left col-span-5">
+        <h3 class="text-xl md:text-3xl font-bold text-black my-4">Savannah Nguyen</h3>
+        <p class="text-black font-medium text-base md:text-xl mb-4">tanya.hill@example.com</p>
+        <p class="text-[#696984] text-base font-normal md:text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        </p>
 
-            <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
-            <p class="text-lg text-gray-500 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <div class="flex justify-center lg:justify-start space-x-4 mt-6">
+          <a href="#" class="text-white bg-[#49BBBD] py-2 px-3 rounded-full"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-white bg-[#49BBBD] py-2 px-3 rounded-full"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white bg-[#49BBBD] py-2 px-3 rounded-full"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex flex-col items-center space-y-10 mt-40 mx-5 col-span-1">
+        <img src="img/adam-img.svg" class=" rounded-full" alt="" />
+        <img src="img/card-img.svg" class=" rounded-full" alt="" />
+        <img src="img/card-img1.svg" class=" rounded-full" alt="" />
+        <img src="img/johan.svg" class=" rounded-full" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+  <section>
+    <div class="max-w-7xl mx-auto px-4 py-10 lg:my-20">
+      <div class="flex justify-between items-center pb-12">
+        <h2 class="text-3xl font-medium">Top Education offers and deals are listed here</h2>
+        <a href="#" class="text-[#49BBBD] text-lg font-semibold">See all</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="relative rounded-2xl overflow-hidden">
+          <img src="./img/google-meeting-img.svg" alt="Card Image" class="object-cover" />
+
+          <div class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3">
+            <div class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg">
+              50%
+            </div>
+            <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+            <p class="text-xl font-medium text-white lg:w-[288px]">
+              Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+              eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+              elit, sed do eiusmod tempor
             </p>
-
-            <div class="flex justify-between items-center mt-4">
-              <div class="flex items-center space-x-2">
-                <img src="./img/lina-img.svg" alt="Lina">
-                <span class="text-lg poppins-m text-black">Lina</span>
-              </div>
-              <div class="text-sm">
-                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
-              </div>
-            </div>
           </div>
         </div>
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
-          <img src="./img/type.svg" alt="Course" class=" object-cover">
-          <div class="py-4">
-            <div class="flex justify-between text-sm text-gray-500 mb-4">
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">Design</span>
-              </span>
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">3 Month</span>
-              </span>
-            </div>
 
-            <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
-            <p class="text-lg text-gray-500 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <div class="relative rounded-2xl overflow-hidden">
+          <img src="./img/checkout-card-img.svg" alt="Card Image" class="object-cover" />
+
+          <div class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3">
+            <div class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg">
+              10%
+            </div>
+            <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+            <p class="text-xl font-medium text-white lg:w-[288px]">
+              Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+              eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+              elit, sed do eiusmod tempor
             </p>
-
-            <div class="flex justify-between items-center mt-4">
-              <div class="flex items-center space-x-2">
-                <img src="./img/lina-img.svg" alt="Lina">
-                <span class="text-lg poppins-m text-black">Lina</span>
-              </div>
-              <div class="text-sm">
-                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
-              </div>
-            </div>
           </div>
         </div>
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
-          <img src="./img/title-img.svg" alt="Course" class=" object-cover">
-          <div class="py-4">
-            <div class="flex justify-between text-sm text-gray-500 mb-4">
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">Design</span>
-              </span>
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">3 Month</span>
-              </span>
-            </div>
 
-            <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
-            <p class="text-lg text-gray-500 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <div class="relative rounded-2xl overflow-hidden">
+          <img src="./img/cat-img.svg" alt="Card Image" class="object-cover" />
+
+          <div class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-8 space-y-3">
+            <div class="bg-teal-400 text-white font-bold text-[50px] w-[110px] py-4 rounded-lg">
+              50%
+            </div>
+            <h3 class="text-2xl font-bold text-white">Lorem ipsum dolor</h3>
+            <p class="text-xl font-medium text-white lg:w-[288px]">
+              Lorem ipsum dolor sit amet, consectetur adipising elit, sed do
+              eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipising
+              elit, sed do eiusmod tempor
             </p>
-
-            <div class="flex justify-between items-center mt-4">
-              <div class="flex items-center space-x-2">
-                <img src="./img/lina-img.svg" alt="Lina">
-                <span class="text-lg poppins-m text-black">Lina</span>
-              </div>
-              <div class="text-sm">
-                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden px-4 py-4">
-          <img src="./img/mac-side-img.svg" alt="Course" class=" object-cover">
-          <div class="py-4">
-            <div class="flex justify-between text-sm text-gray-500 mb-4">
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-solid fa-table-cells-large text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">Design</span>
-              </span>
-              <span class="flex items-center space-x-1 poppins-m">
-                <i class="fa-regular fa-clock text-[#D9D9D9]"></i>
-                <span class="text-[#696984]">3 Month</span>
-              </span>
-            </div>
-
-            <h3 class="text-[23px] poppins-m text-gray-800">AWS Certified solutions Architect</h3>
-            <p class="text-lg text-gray-500 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            </p>
-
-            <div class="flex justify-between items-center mt-4">
-              <div class="flex items-center space-x-2">
-                <img src="./img/lina-img.svg" alt="Lina">
-                <span class="text-lg poppins-m text-black">Lina</span>
-              </div>
-              <div class="text-sm">
-                <span class="line-through text-lg text-gray-400 mr-2">$100</span>
-                <span class="text-[#49BBBD] text-2xl poppins-b">$80</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <footer class="footer-bg py-16 px-4 mt-16">
+    <div class="max-w-4xl mx-auto text-center">
 
+      <div class="flex items-center justify-center gap-14 mb-16">
+        <div class="flex items-center justify-center">
+          <a href="about.html"> <img src="./img/footer-logo.svg" alt=""></a>
+        </div>
 
+        <div class="border-l border-gray-400 pl-8 text-left poppins-6">
+          <p class="text-white text-xl leading-tight">Virtual Class</p>
+          <p class="text-white text-xl leading-tight">for Zoom</p>
+        </div>
+      </div>
 
+      <div class="mb-16">
+        <h3 class="text-gray-300 text-2xl poppins-m mb-8">Subscribe to get our Newsletter</h3>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+          <input type="email" placeholder="Your Email"
+            class="w-full sm:flex-1 px-6 py-3 rounded-full bg-transparent border border-gray-400 text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors">
+          <button class="bg-[#49BBBD] hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-semibold">
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-wrap justify-center items-center gap-2 text-gray-300 text-base">
+          <a href="#" class="hover:text-white transition-colors">Careers</a>
+          <span class="text-gray-500 mx-2">|</span>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span class="text-gray-500 mx-2">|</span>
+          <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+      </div>
+
+      <div class="text-gray-400 text-base">
+        © 2021 Class Technologies Inc.
+      </div>
+    </div>
+  </footer>
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
