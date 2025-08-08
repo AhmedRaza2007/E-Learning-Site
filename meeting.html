@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://kit.fontawesome.com/ca86787c55.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+  <link rel="stylesheet" href="checkout.css">
+  <title>Conference Meeting</title>
+</head>
+
+<body>
+  <section class="bg-blue-50 p-6 ">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 space-y-4">
+
+        <div class="grid lg:grid-cols-12 grid-cols-1 items-center">
+          <div>
+            <button class="text-xl bg-[#49BBBD] text-white px-3 py-2 "><i
+                class="fa-solid fa-arrow-left-long font-thin"></i></button>
+          </div>
+          <div class="flex justify-between bg-white rounded-xl shadow p-4 lg:py-6  lg:px-6 col-span-11">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="font-semibold lg:text-xl text-lg text-[#252641] mb-2">UX/UI Design Conference Meeting</h2>
+                <p class="text-sm text-[#252641]">9 Lesson 6h 30min</p>
+              </div>
+            </div>
+            <div class="text-center flex items-center">
+              <button class="text-gray-400 hover:text-gray-600">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" relative mt-8">
+          <img src="./img/portrait-teacher-giving-online-class.svg" alt="Main Call">
+
+          <div class="absolute top-10 right-8 space-y-4">
+            <img src="img/meeting-teacher1.svg" class="h-[120px]" />
+            <img src="img/meeting-img2.svg" class="h-[120px]" />
+            <img src="img/meeting-img3.svg" class="h-[120px]" />
+          </div>
+
+          <div
+            class="flex justify-center gap-10 px-44 py-6 rounded-2xl mt-4 absolute bg-[#E6F2FF] left-[33px] top-[672px]">
+            <button class="bg-white text-[#EE645B] py-3 px-4 rounded-lg text-3xl">
+              <i class="fa-solid fa-video"></i>
+            </button>
+            <button class="bg-white text-[#29B9E7] py-3 px-4 rounded-lg text-3xl">
+              <i class="fa-solid fa-microphone"></i>
+            </button>
+            <button class="bg-white text-[#EE5B90] py-3 px-4 rounded-lg text-3xl">
+              <i class="fa-solid fa-phone"></i>
+            </button>
+            <button class="bg-white text-[#00CBB8] py-3 px-4 rounded-lg text-3xl">
+              <i class="fa-solid fa-display"></i>
+            </button>
+            <button class="bg-white text-[#49BBBD] py-3 px-4 rounded-lg text-3xl">
+              <i class="fa-solid fa-share-from-square"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white p-4 lg:px-6 rounded-xl shadow lg:mr-10">
+          <h3 class="text-lg lg:text-3xl font-semibold mb-4 lg:mt-8 text-[#252641]">Course Contents</h3>
+          <div class="flex justify-between pr-3 mb-4">
+            <p class="text-sm text-[#49BBBD] font-medium mb-2">2/5 COMPLETED</p>
+            <i class="fa-solid fa-calendar-minus text-[#49BBBD]"></i>
+          </div>
+          <div class="h-1 w-full mb-4 flex gap-1">
+            <div class="h-1 bg-[#49BBBD] w-[70px]"></div>
+            <div class="h-1 bg-[#49BBBD] w-[70px]"></div>
+            <div class="h-1 bg-[#D1EEEF] w-[70px]"></div>
+            <div class="h-1 bg-[#D1EEEF] w-[70px]"></div>
+            <div class="h-1 bg-[#D1EEEF] w-[70px]"></div>
+          </div>
+
+          <div class="p-4 border cursor-pointer" onclick="toggleSection('getStarted')">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-gray-700">Get Started</h3>
+              <div class="text-sm text-gray-500">1 Hour | 5 Lessons</div>
+            </div>
+            <div id="getStarted" class="mt-2 hidden">
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>- Introduction</li>
+                <li>- How to start</li>
+                <li>- Setting up</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-4 border border-teal-400 rounded-xl m-4 cursor-pointer"
+            onclick="toggleSection('illustratorStruct')">
+            <div class="flex justify-between items-center">
+              <h3 class="text-teal-500 font-semibold">Illstrarator Structuors</h3>
+              <div class="text-sm text-gray-500">2 Hour | 3 Lessons</div>
+            </div>
+            <ul id="illustratorStruct" class="mt-4 space-y-2">
+              <li class="text-sm text-teal-600 font-medium flex justify-between">
+                <span>1. Lorem ipsum dolor sit amet</span>
+                <span>65:00</span>
+              </li>
+              <li class="text-sm text-gray-600 flex justify-between items-center">
+                <span>2. Lorem ipsum dolor</span>
+                <div class="flex items-center gap-2">
+                  <span>25:00</span>
+                  <span class="text-black">🔒</span>
+                </div>
+              </li>
+              <li class="text-sm text-gray-600 flex justify-between items-center">
+                <span>3. Lorem ipsum dolor sit amet</span>
+                <div class="flex items-center gap-2">
+                  <span>30:00</span>
+                  <span class="text-black">🔒</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-4 border-b cursor-pointer" onclick="toggleSection('usingIllustrator')">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-gray-700">Using Illstrarator</h3>
+              <div class="text-sm text-gray-500">1 Hour | 4 Lessons</div>
+            </div>
+            <div id="usingIllustrator" class="mt-2 hidden">
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>- Basics</li>
+                <li>- Tools</li>
+                <li>- Shortcuts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-4 border-b cursor-pointer" onclick="toggleSection('whatIsPandas')">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-gray-700">What is Pandas?</h3>
+              <div class="text-sm text-gray-500">12:54 | 5 Lessons</div>
+            </div>
+            <div id="whatIsPandas" class="mt-2 hidden">
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>- Intro to Pandas</li>
+                <li>- Series and DataFrames</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-4 cursor-pointer" onclick="toggleSection('workNumpy')">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-gray-700">Work with Numpy</h3>
+              <div class="text-sm text-gray-500">59:00 | 3 Lessons</div>
+            </div>
+            <div id="workNumpy" class="mt-2 hidden">
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>- Numpy Arrays</li>
+                <li>- Math with Numpy</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bg-white p-6 py-8 rounded-xl shadow">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg lg:text-3xl font-semibold ">Book for you</h3>
+          <i class="fa-regular fa-calendar text-[#49BBBD] text-lg"></i>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="shadow-lg rounded-lg p-2 text-center">
+              <img src="./img/course.svg" class="rounded-md mb-2" />
+              <p class="text-xl font-medium mb-3">All Benefits of PLUS</p>
+              <p class="text-[#49BBBD] font-semibold text-3xl">$24</p>
+            </div>
+            <div class="shadow-lg rounded-lg p-2 text-center">
+              <img src="img/card-img4.svg" class="rounded-md mb-2" />
+              <p class="text-xl font-medium mb-3">All Benefits of PLUS</p>
+              <p class="text-[#49BBBD] font-semibold text-3xl">$24</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>
